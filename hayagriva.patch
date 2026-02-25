@@ -1,0 +1,23 @@
+--- a/Cargo.lock
++++ b/Cargo.lock
+@@ -935,8 +935,7 @@ checksum = "841d1cc9bed7f9236f321df977030373f4a4163ae1a7dbfe1a51a2c1a51d9100"
+ [[package]]
+ name = "hayagriva"
+ version = "0.9.1"
+-source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "1cb69425736f184173b3ca6e27fcba440a61492a790c786b1c6af7e06a03e575"
++source = "git+https://github.com/typst/hayagriva?rev=a137441413a5907c15ced44d1502dfb9fa1a3014#a137441413a5907c15ced44d1502dfb9fa1a3014"
+ dependencies = [
+  "biblatex",
+  "ciborium",
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -62,7 +62,7 @@ fontdb = { version = "0.23", default-features = false }
+ fs_extra = "1.3"
+ rustc-hash = "2.1"
+ glidesort = "0.1.2"
+-hayagriva = "0.9.1"
++hayagriva = { git = "https://github.com/typst/hayagriva", rev = "a137441413a5907c15ced44d1502dfb9fa1a3014" }
+ hayro = { version = "0.4.0", default-features = false }
+ hayro-svg = { version = "0.2.0", default-features = false }
+ hayro-syntax = "0.4.0"
