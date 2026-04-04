@@ -14,8 +14,7 @@
   }:
     flake-utils.lib.eachDefaultSystem (
       system: let
-        pkgs = import nixpkgs {inherit system;};
-
+        pkgs = nixpkgs.legacyPackages.${system};
         patchedTypst = pkgs.typst.overrideAttrs (old: {
           patches = [./hayagriva.patch];
           cargoDeps = old.cargoDeps.overrideAttrs (old: {
